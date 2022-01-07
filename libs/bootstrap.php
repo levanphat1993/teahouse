@@ -38,7 +38,7 @@ class Bootstrap {
                     return $this->error();
                 }
             }else{
-                $controller->index();
+                return $controller->index();
             }
         }
     }

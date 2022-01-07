@@ -9,8 +9,13 @@
 <body>
 <div id="header">
     <br />
-    <a href="index">Index</a>
-    <a href="help">Help</a>
-    <a href="login">Login</a>
+    <a href="<? echo URl; ?>index">Index</a>
+    <a href="<? echo URL; ?>help">Help</a>
+    <? if(Session::get('loggedIn') == true):?>
+        <a href="<? echo URL; ?>dashboard/logout">logout</a>
+    <? else: ?>
+    <a href="<? echo URL; ?>login">Login</a>
+    <? endif; ?>
+    <a href="<? echo URL; ?>dashboard">dashboard</a>
 </div>
 <div id="content">

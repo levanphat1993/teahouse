@@ -1,6 +1,7 @@
 <?php
 
 class Login_Model extends Model {
+
     function __construct()
     {
         parent::__construct();
@@ -17,6 +18,15 @@ class Login_Model extends Model {
 
         $data = $ex->fetchAll();
         $count = $ex->rowCount();
+
+        if($count > 0){
+            Session::init();
+            Session::set('loggedIn', true);
+            header('location: ../dashboard');
+        }else{
+            header('location: ../login');
+        }
+
         echo '<pre>' . var_export($count, true) . '</pre>'; die;
     }
 }

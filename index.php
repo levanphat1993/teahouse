@@ -7,6 +7,7 @@ require 'libs/view.php';
 
 //library
 require 'libs/database.php';
+require 'libs/session.php';
 
 //
 require 'config/paths.php';
