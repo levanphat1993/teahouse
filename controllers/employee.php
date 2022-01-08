@@ -1,6 +1,6 @@
 <?php
 
-class Dashboard extends Controller {
+class Employee extends Controller {
 
     function __construct()
     {
@@ -12,21 +12,23 @@ class Dashboard extends Controller {
             header('location: ../login');
             exit;
         }
+
         $this->view->js = array(
-            'dashboard/js/dashboard.js'
+            'employee/js/employee.js'
         );
     }
 
     public function index()
     {
-        $this->view->render('dashboard/index');
+        $this->view->data = $this->model->fetchAll();
+        $this->view->render('employee/index');
     }
 
-    public function logout()
+    public function insert()
     {
-        Session::destroy();
-        header('location: ../login');
-        exit;
+        if($this->model->insert()){
+            header('location: ../employee');
+        }
     }
 
 }

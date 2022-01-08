@@ -9,6 +9,7 @@ class Login_Model extends Model {
 
     public function run()
     {
+
         $ex = $this->db->prepare("select id from users where 
                            username = :username and password = MD5(:password)");
         $ex->execute(array(
@@ -26,7 +27,5 @@ class Login_Model extends Model {
         }else{
             header('location: ../login');
         }
-
-        echo '<pre>' . var_export($count, true) . '</pre>'; die;
     }
 }

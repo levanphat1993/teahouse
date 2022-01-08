@@ -4,6 +4,6 @@ class Database extends PDO {
 
     public function __construct()
     {
-        parent::__construct('mysql:host=localhost;dbname=sql_teahouse_com', 'sql_teahouse_com', 'cARZyZF7jaXTNdWR');
+        parent::__construct(DB_TYPE.':host='.DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASS);
     }
 }
