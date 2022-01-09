@@ -6,13 +6,14 @@ class Bootstrap {
         $urls = ltrim($urls, '/');
         $urls = rtrim($urls, '/');
         $urls = explode('/', $urls);
-
         if(empty($urls[0])) {
             require 'controllers/index.php';
             $controller = new Index();
+            $controller->loadModel('index');
             $controller->index();
             return false;
         }
+
 
         $file = 'controllers/'.$urls[0].'.php';
         if (file_exists($file)){

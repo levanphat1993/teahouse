@@ -1,7 +1,4 @@
 </div>
-
-
-
 <div id="footer">
     (C) Footer
 </div>

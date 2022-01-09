@@ -26,16 +26,18 @@
 <body>
 <div id="header">
     <br />
-    <a href="<? echo URl; ?>index">Index</a>
-    <a href="<? echo URL; ?>help">Help</a>
+    <a href="<? echo URL; ?>index">Index</a>
+
     <? if(Session::get('loggedIn') == true):?>
         <a href="<? echo URL; ?>dashboard/logout">logout</a>
+        <a href="<? echo URL; ?>coupons">coupons</a>
         <a href="<? echo URL; ?>employee">employee</a>
         <a href="<? echo URL; ?>gift">gift</a>
         <a href="<? echo URL; ?>store">store</a>
+        <a href="<? echo URL; ?>assignment">assignment</a>
+        <a href="<? echo URL; ?>point">point</a>
     <? else: ?>
     <a href="<? echo URL; ?>login">Login</a>
     <? endif; ?>
-    <a href="<? echo URL; ?>dashboard">dashboard</a>
 </div>
 <div id="content">

@@ -2,15 +2,6 @@
 
 class Employee_Model extends Model {
 
-    public $TABLE = 'employee';
-    public $ID = 'id';
-    public $NAME = 'name';
-    public $PHONE = 'phone';
-    public $EMAIl = 'email';
-    public $CREATE_AT = 'create_at';
-    public $UPDATE_AT = 'update_at';
-    public $ACTION = 'action';
-
     function __construct()
     {
         parent::__construct();
